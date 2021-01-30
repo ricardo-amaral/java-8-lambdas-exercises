@@ -1,6 +1,7 @@
 package com.insightfullogic.java8.examples.chapter3;
 
 import com.insightfullogic.java8.examples.chapter1.Artist;
+import com.insightfullogic.java8.examples.chapter1.SampleData;
 
 import java.util.Iterator;
 import java.util.List;
@@ -70,6 +71,12 @@ public class Iteration {
                 .count();
         // END internal_count_londoners_printed
         return count;
+    }
+
+    public static void main(String[] args) {
+        Iteration iteration = new Iteration();
+        iteration.filterArtistsFromLondonPrinted(SampleData.membersOfTheBeatles);
+        iteration.internalCountArtistsFromLondonPrinted(SampleData.membersOfTheBeatles);
     }
 
 }

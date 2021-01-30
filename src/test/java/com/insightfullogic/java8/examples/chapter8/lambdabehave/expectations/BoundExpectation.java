@@ -9,7 +9,7 @@ public class BoundExpectation {
     public BoundExpectation(Object value) {
         this.objectUnderTest = value;
     }
-    
+
     public void isEqualTo(Object expected) {
         assertEquals(expected, objectUnderTest);
     }

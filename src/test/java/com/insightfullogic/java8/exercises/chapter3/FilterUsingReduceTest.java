@@ -1,13 +1,13 @@
 package com.insightfullogic.java8.exercises.chapter3;
 
-import static java.util.Arrays.asList;
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
-import org.junit.Test;
+import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
 
 public class FilterUsingReduceTest {
 

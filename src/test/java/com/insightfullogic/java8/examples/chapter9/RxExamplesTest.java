@@ -12,8 +12,8 @@ public class RxExamplesTest {
     public void filtersAlbums() throws InterruptedException {
         RxExamples examples = new RxExamples(SampleData.getThreeArtists());
         Artist artist = examples.search("John", "UK", 5)
-                                .toBlockingObservable()
-                                .single();
+                .toBlockingObservable()
+                .single();
 
         assertEquals(SampleData.johnLennon, artist);
     }

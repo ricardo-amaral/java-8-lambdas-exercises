@@ -29,14 +29,14 @@ public class AlbumLookupTest {
         AlbumLookupFactory future = FutureAlbumLookup::new;
 
         Stream.of(completable, future)
-              .forEach(factory -> {
- AlbumLookup lookup = factory.apply(trackList, musicianList);
-                  System.out.println("Testing: " + lookup.getClass().getSimpleName());
-                  Album result = lookup.lookupByName(album.getName());
+                .forEach(factory -> {
+                    AlbumLookup lookup = factory.apply(trackList, musicianList);
+                    System.out.println("Testing: " + lookup.getClass().getSimpleName());
+                    Album result = lookup.lookupByName(album.getName());
 
-                  assertEquals(trackList, result.getTrackList());
-                  assertEquals(musicianList, result.getMusicianList());
-              });
+                    assertEquals(trackList, result.getTrackList());
+                    assertEquals(musicianList, result.getMusicianList());
+                });
     }
 
 }

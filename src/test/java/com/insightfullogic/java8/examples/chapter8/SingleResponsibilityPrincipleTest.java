@@ -16,10 +16,10 @@ public class SingleResponsibilityPrincipleTest {
 
     @Parameters
     public static Collection<Object[]> data() {
-        Object[][] data = new Object[][]{   {new ImperativeRefactoredPrimeCounter()},
-                                            {new ImperativeSingleMethodPrimeCounter()},
-                                            {new FunctionalPrimeCounter()},
-                                            {new ParallelFunctionalPrimeCounter()}};
+        Object[][] data = new Object[][]{{new ImperativeRefactoredPrimeCounter()},
+                {new ImperativeSingleMethodPrimeCounter()},
+                {new FunctionalPrimeCounter()},
+                {new ParallelFunctionalPrimeCounter()}};
         return Arrays.asList(data);
     }
 

@@ -4,13 +4,10 @@ import com.insightfullogic.java8.examples.chapter1.Album;
 import com.insightfullogic.java8.examples.chapter1.SampleData;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.insightfullogic.java8.examples.chapter1.SampleData.aLoveSupreme;
-import static com.insightfullogic.java8.examples.chapter1.SampleData.manyTrackAlbum;
-import static com.insightfullogic.java8.examples.chapter1.SampleData.sampleShortAlbum;
+import static com.insightfullogic.java8.examples.chapter1.SampleData.*;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 

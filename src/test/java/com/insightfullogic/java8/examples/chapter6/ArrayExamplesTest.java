@@ -14,10 +14,10 @@ public class ArrayExamplesTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        Object[][] data = new Object[][] {
-                { 0, new double[]{} },
-                { 2, new double[]{0, 1} },
-                { 4, new double[]{0, 1, 2, 3}  }
+        Object[][] data = new Object[][]{
+                {0, new double[]{}},
+                {2, new double[]{0, 1}},
+                {4, new double[]{0, 1, 2, 3}}
         };
         return Arrays.asList(data);
     }

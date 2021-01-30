@@ -25,14 +25,15 @@ public class TestOrder {
 
     @Parameters
     public static Collection<Object[]> data() {
-        Object[][] data = new Object[][] { of(OrderImperative::new), of(OrderStreams::new), of(OrderDomain::new) };
+        Object[][] data = new Object[][]{of(OrderImperative::new), of(OrderStreams::new), of(OrderDomain::new)};
         return asList(data);
     }
 
-    private static interface OrderFactory extends Function<List<Album>, Order> {}
+    private static interface OrderFactory extends Function<List<Album>, Order> {
+    }
 
     private static Object[] of(OrderFactory factory) {
-        return new Object[] { factory };
+        return new Object[]{factory};
     }
 
     public TestOrder(OrderFactory factory) {

@@ -27,13 +27,13 @@ public class StringExamplesTest {
     @Test
     public void allStringJoins() {
         List<Function<List<Artist>, String>> formatters = Arrays.<Function<List<Artist>, String>>asList(
-            StringExamples::formatArtists,
-            StringExamples::formatArtistsForLoop,
-            StringExamples::formatArtistsRefactor1,
-            StringExamples::formatArtistsRefactor2,
-            StringExamples::formatArtistsRefactor3,
-            StringExamples::formatArtistsRefactor4,
-            StringExamples::formatArtistsRefactor5
+                StringExamples::formatArtists,
+                StringExamples::formatArtistsForLoop,
+                StringExamples::formatArtistsRefactor1,
+                StringExamples::formatArtistsRefactor2,
+                StringExamples::formatArtistsRefactor3,
+                StringExamples::formatArtistsRefactor4,
+                StringExamples::formatArtistsRefactor5
         );
 
         formatters.forEach(formatter -> {

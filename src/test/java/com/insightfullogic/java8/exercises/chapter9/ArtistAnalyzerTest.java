@@ -16,9 +16,9 @@ public class ArtistAnalyzerTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         FakeLookupService lookupService = new FakeLookupService();
-        Object[][] data = new Object[][] {
-            { new CallbackArtistAnalyser(lookupService::lookupArtistName) },
-            { new CompletableFutureArtistAnalyser(lookupService::lookupArtistName) },
+        Object[][] data = new Object[][]{
+                {new CallbackArtistAnalyser(lookupService::lookupArtistName)},
+                {new CompletableFutureArtistAnalyser(lookupService::lookupArtistName)},
         };
         return Arrays.asList(data);
     }

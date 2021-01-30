@@ -19,11 +19,11 @@ public class RefactorTest {
     @Test
     public void allStringJoins() {
         List<Supplier<Refactor.LongTrackFinder>> finders = Arrays.<Supplier<Refactor.LongTrackFinder>>asList(
-            Refactor.Step0::new,
-            Refactor.Step1::new,
-            Refactor.Step2::new,
-            Refactor.Step3::new,
-            Refactor.Step4::new
+                Refactor.Step0::new,
+                Refactor.Step1::new,
+                Refactor.Step2::new,
+                Refactor.Step3::new,
+                Refactor.Step4::new
         );
 
         List<Album> albums = unmodifiableList(asList(SampleData.aLoveSupreme, SampleData.sampleShortAlbum));
