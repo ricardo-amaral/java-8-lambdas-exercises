@@ -5,7 +5,10 @@ import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.RunnerException;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeSet;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -17,13 +20,13 @@ public class IntegerSum {
 
     public static void main(String[] ignore) throws IOException, RunnerException {
         final String[] args = {
-            ".*IntegerSum.*",
-            "-wi",
-            "10",
-            "-i",
-            "20",
-            "-f",
-            "1"
+                ".*IntegerSum.*",
+                "-wi",
+                "10",
+                "-i",
+                "20",
+                "-f",
+                "1"
         };
         Main.main(args);
     }
@@ -71,11 +74,11 @@ public class IntegerSum {
     }
 
     // BEGIN addIntegers
-private int addIntegers(List<Integer> values) {
-    return values.parallelStream()
-                 .mapToInt(i -> i)
-                 .sum();
-}
+    private int addIntegers(List<Integer> values) {
+        return values.parallelStream()
+                .mapToInt(i -> i)
+                .sum();
+    }
     // END addIntegers
 
     @GenerateMicroBenchmark

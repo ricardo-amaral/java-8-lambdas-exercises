@@ -6,7 +6,6 @@ import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.RunnerException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -43,15 +42,15 @@ public class OptimisationExample {
 
     private void addNumbers(List<Integer> container) {
         IntStream.range(0, 1_000_000)
-                 .forEach(container::add);
+                .forEach(container::add);
     }
 
     @GenerateMicroBenchmark
     // BEGIN slowSumOfSquares
     public int slowSumOfSquares() {
         return linkedListOfNumbers.parallelStream()
-                                  .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
     // END slowSumOfSquares
 

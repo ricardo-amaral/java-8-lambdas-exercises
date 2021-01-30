@@ -41,15 +41,15 @@ public class OptimisationExample {
 
     private void addNumbers(List<Integer> container) {
         IntStream.range(0, 1_000_000)
-                 .forEach(container::add);
+                .forEach(container::add);
     }
 
     @GenerateMicroBenchmark
     // BEGIN slowSumOfSquares
     public int slowSumOfSquares() {
         return linkedListOfNumbers.parallelStream()
-                                  .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
     // END slowSumOfSquares
 

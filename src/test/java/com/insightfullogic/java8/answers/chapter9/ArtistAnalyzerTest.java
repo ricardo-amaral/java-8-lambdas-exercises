@@ -1,8 +1,5 @@
 package com.insightfullogic.java8.answers.chapter9;
 
-import com.insightfullogic.java8.answers.chapter9.ArtistAnalyzer;
-import com.insightfullogic.java8.answers.chapter9.CallbackArtistAnalyser;
-import com.insightfullogic.java8.answers.chapter9.CompletableFutureArtistAnalyser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -19,9 +16,9 @@ public class ArtistAnalyzerTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         FakeLookupService lookupService = new FakeLookupService();
-        Object[][] data = new Object[][] {
-            { new CallbackArtistAnalyser(lookupService::lookupArtistName) },
-            { new CompletableFutureArtistAnalyser(lookupService::lookupArtistName) },
+        Object[][] data = new Object[][]{
+                {new CallbackArtistAnalyser(lookupService::lookupArtistName)},
+                {new CompletableFutureArtistAnalyser(lookupService::lookupArtistName)},
         };
         return Arrays.asList(data);
     }

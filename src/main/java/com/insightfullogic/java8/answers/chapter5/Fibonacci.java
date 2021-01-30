@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Fibonacci {
 
-    private final Map<Integer,Long> cache;
+    private final Map<Integer, Long> cache;
 
     public Fibonacci() {
         cache = new HashMap<>();
@@ -14,7 +14,7 @@ public class Fibonacci {
     }
 
     public long fibonacci(int x) {
-        return cache.computeIfAbsent(x, n -> fibonacci(n-1) + fibonacci(n-2));
+        return cache.computeIfAbsent(x, n -> fibonacci(n - 1) + fibonacci(n - 2));
     }
 
 }

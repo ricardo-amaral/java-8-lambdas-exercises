@@ -7,8 +7,6 @@ import com.insightfullogic.java8.exercises.Exercises;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.toList;
-
 public class Question1 {
     public static int addUp(Stream<Integer> numbers) {
         return Exercises.replaceThisWithSolution();

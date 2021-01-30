@@ -9,7 +9,7 @@ package com.insightfullogic.java8.examples.chapter1;
  * @author richard
  */
 public final class Track {
-    
+
     private final String name;
     private final int length;
 

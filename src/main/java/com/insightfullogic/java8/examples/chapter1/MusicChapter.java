@@ -9,11 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Richard Warburton
  */
 public abstract class MusicChapter {
-    
+
     protected final List<Artist> artists;
     protected final List<Album> albums;
 
@@ -24,7 +23,7 @@ public abstract class MusicChapter {
     }
 
     private void loadData(String file) {
-        
+
     }
-    
+
 }

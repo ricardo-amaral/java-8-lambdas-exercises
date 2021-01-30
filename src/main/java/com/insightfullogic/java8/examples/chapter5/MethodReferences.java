@@ -25,8 +25,8 @@ public class MethodReferences {
 
     public static Map<String, Long> countWordsIn(Path path) throws IOException {
         Stream<String> words = Files.readAllLines(path, defaultCharset())
-                                    .stream()
-                                    .flatMap(SPACES::splitAsStream);
+                .stream()
+                .flatMap(SPACES::splitAsStream);
 
         return countWords(words);
     }

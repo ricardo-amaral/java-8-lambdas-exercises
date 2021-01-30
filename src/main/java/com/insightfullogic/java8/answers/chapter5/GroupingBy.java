@@ -10,6 +10,7 @@ import java.util.stream.Collector;
 public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, List<T>>> {
 
     private final static Set<Characteristics> characteristics = new HashSet<>();
+
     static {
         characteristics.add(Characteristics.IDENTITY_FINISH);
     }

@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.answers.chapter6;
 
-import com.insightfullogic.java8.answers.chapter6.BuggyReduce;
 import org.junit.Test;
 
 import java.util.Arrays;

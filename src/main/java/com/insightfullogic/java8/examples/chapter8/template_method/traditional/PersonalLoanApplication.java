@@ -9,7 +9,7 @@ public class PersonalLoanApplication extends LoanApplication {
 
     @Override
     protected void checkIncomeHistory() {
-        
+
     }
 
     @Override

@@ -32,7 +32,7 @@ public class OptimisationExampleFixed {
 
     @Setup
     public void init() {
-        arrayListOfNumbers= new ArrayList<>();
+        arrayListOfNumbers = new ArrayList<>();
         addNumbers(arrayListOfNumbers);
 
         linkedListOfNumbers = new LinkedList<>();
@@ -47,43 +47,43 @@ public class OptimisationExampleFixed {
     @GenerateMicroBenchmark
     public int slowSumOfSquares() {
         return linkedListOfNumbers.parallelStream()
-                                  .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
 
     @GenerateMicroBenchmark
     public int serialSlowSumOfSquares() {
         return linkedListOfNumbers.stream()
-                                  .map(x -> x * x)
-                                  .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
 
     @GenerateMicroBenchmark
     public int intermediateSumOfSquares() {
         return arrayListOfNumbers.parallelStream()
-                                 .map(x -> x * x)
-                                 .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
 
     @GenerateMicroBenchmark
     public int serialIntermediateSumOfSquares() {
         return arrayListOfNumbers.stream()
-                                 .map(x -> x * x)
-                                 .reduce(0, (acc, x) -> acc + x);
+                .map(x -> x * x)
+                .reduce(0, (acc, x) -> acc + x);
     }
 
     @GenerateMicroBenchmark
     public int fastSumOfSquares() {
         return arrayListOfNumbers.parallelStream()
-                                 .mapToInt(x -> x * x)
-                                 .sum();
+                .mapToInt(x -> x * x)
+                .sum();
     }
 
     @GenerateMicroBenchmark
     public int serialFastSumOfSquares() {
         return arrayListOfNumbers.stream()
-                           .mapToInt(x -> x * x)
-                           .sum();
+                .mapToInt(x -> x * x)
+                .sum();
     }
 
 }

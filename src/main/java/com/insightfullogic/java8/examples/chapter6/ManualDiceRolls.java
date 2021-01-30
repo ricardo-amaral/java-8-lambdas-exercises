@@ -37,7 +37,7 @@ public class ManualDiceRolls {
 
     private void printResults() {
         results.entrySet()
-               .forEach(System.out::println);
+                .forEach(System.out::println);
     }
 
     private List<Future<?>> submitJobs() {
@@ -60,8 +60,8 @@ public class ManualDiceRolls {
 
     private void accumulateResult(int entry) {
         results.compute(entry, (key, previous) ->
-            previous == null ? fraction
-                             : previous + fraction
+                previous == null ? fraction
+                        : previous + fraction
         );
     }
 

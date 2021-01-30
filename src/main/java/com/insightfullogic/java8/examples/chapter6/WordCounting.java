@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
@@ -47,11 +46,11 @@ public class WordCounting {
     public void countWords(InputStream stream) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
             Map<String, Long> counts = reader
-                                        .lines()
-                                        .flatMap(space::splitAsStream)
-                                        .map(String::trim)
-                                        .filter(word -> !word.isEmpty())
-                                        .collect(groupingBy(word -> word, counting()));
+                    .lines()
+                    .flatMap(space::splitAsStream)
+                    .map(String::trim)
+                    .filter(word -> !word.isEmpty())
+                    .collect(groupingBy(word -> word, counting()));
 
             counts.forEach((word, count) -> System.out.println(word + " -> " + count));
         } catch (IOException e) {

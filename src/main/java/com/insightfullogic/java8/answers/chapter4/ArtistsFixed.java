@@ -23,7 +23,7 @@ public class ArtistsFixed {
     public String getArtistName(int index) {
         Optional<Artist> artist = getArtist(index);
         return artist.map(Artist::getName)
-                     .orElse("unknown");
+                .orElse("unknown");
     }
 
 }

@@ -20,8 +20,8 @@ public class CallbackArtistAnalyser implements ArtistAnalyzer {
 
     private long getNumberOfMembers(String artistName) {
         return artistLookupService.apply(artistName)
-                                  .getMembers()
-                                  .count();
+                .getMembers()
+                .count();
     }
 
 }

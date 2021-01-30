@@ -20,8 +20,8 @@ public class Artists {
     }
 
     private void indexException(int index) {
-        throw new IllegalArgumentException(index + 
-                                           " doesn't correspond to an Artist");
+        throw new IllegalArgumentException(index +
+                " doesn't correspond to an Artist");
     }
 
     public String getArtistName(int index) {

@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.answers.chapter6;
 
-import com.insightfullogic.java8.answers.chapter6.SerialToParallel;
 import org.junit.Test;
 
 import java.util.stream.IntStream;

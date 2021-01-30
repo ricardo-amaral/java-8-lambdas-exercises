@@ -8,6 +8,6 @@ public interface ArtistAnalyzer {
     public void isLargerGroup(String artistName,
                               String otherArtistName,
                               Consumer<Boolean> handler);
-    
+
 }
 // END class

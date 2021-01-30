@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.answers.chapter9;
 
-import com.insightfullogic.java8.answers.chapter9.BlockingArtistAnalyzer;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

@@ -23,20 +23,20 @@ public class FutureAlbumLookup implements AlbumLookup {
     }
 
     // BEGIN lookupByName
-@Override
-public Album lookupByName(String albumName) {
-    Future<Credentials> trackLogin = loginTo("track"); // <1>
-    Future<Credentials> artistLogin = loginTo("artist");
+    @Override
+    public Album lookupByName(String albumName) {
+        Future<Credentials> trackLogin = loginTo("track"); // <1>
+        Future<Credentials> artistLogin = loginTo("artist");
 
-    try {
-        Future<List<Track>> tracks = lookupTracks(albumName, trackLogin.get()); // <2>
-        Future<List<Artist>> artists = lookupArtists(albumName, artistLogin.get());
+        try {
+            Future<List<Track>> tracks = lookupTracks(albumName, trackLogin.get()); // <2>
+            Future<List<Artist>> artists = lookupArtists(albumName, artistLogin.get());
 
-        return new Album(albumName, tracks.get(), artists.get()); // <3>
-    } catch (InterruptedException | ExecutionException e) {
-        throw new AlbumLookupException(e.getCause()); // <4>
+            return new Album(albumName, tracks.get(), artists.get()); // <3>
+        } catch (InterruptedException | ExecutionException e) {
+            throw new AlbumLookupException(e.getCause()); // <4>
+        }
     }
-}
     // END lookupByName
 
     // ----------------- FAKE LOOKUP METHODS -----------------

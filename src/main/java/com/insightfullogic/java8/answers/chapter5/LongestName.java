@@ -14,16 +14,16 @@ public class LongestName {
 
     public static Artist byReduce(List<Artist> artists) {
         return artists.stream()
-                      .reduce((acc, artist) -> {
-                          return (byNameLength.compare(acc, artist) >= 0) ? acc : artist;
-                      })
-                      .orElseThrow(RuntimeException::new);
+                .reduce((acc, artist) -> {
+                    return (byNameLength.compare(acc, artist) >= 0) ? acc : artist;
+                })
+                .orElseThrow(RuntimeException::new);
     }
 
     public static Artist byCollecting(List<Artist> artists) {
         return artists.stream()
-                      .collect(Collectors.maxBy(byNameLength))
-                      .orElseThrow(RuntimeException::new);
+                .collect(Collectors.maxBy(byNameLength))
+                .orElseThrow(RuntimeException::new);
     }
 
 }

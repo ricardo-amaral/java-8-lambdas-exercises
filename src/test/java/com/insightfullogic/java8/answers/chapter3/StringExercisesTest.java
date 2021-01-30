@@ -1,6 +1,5 @@
 package com.insightfullogic.java8.answers.chapter3;
 
-import com.insightfullogic.java8.answers.chapter3.StringExercises;
 import org.junit.Test;
 
 import java.util.Arrays;

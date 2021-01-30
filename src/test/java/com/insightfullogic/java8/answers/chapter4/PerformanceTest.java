@@ -2,7 +2,6 @@ package com.insightfullogic.java8.answers.chapter4;
 
 import com.insightfullogic.java8.examples.chapter1.Artist;
 import com.insightfullogic.java8.examples.chapter1.SampleData;
-import com.insightfullogic.java8.answers.chapter4.PerformanceFixed;
 import org.junit.Test;
 
 import java.util.List;

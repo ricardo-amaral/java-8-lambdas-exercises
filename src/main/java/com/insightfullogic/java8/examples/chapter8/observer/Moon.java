@@ -26,31 +26,31 @@ public class Moon {
 
     private static void classBasedExample() {
 // BEGIN classBasedExample
-Moon moon = new Moon();
-moon.startSpying(new Nasa());
-moon.startSpying(new Aliens());
+        Moon moon = new Moon();
+        moon.startSpying(new Nasa());
+        moon.startSpying(new Aliens());
 
-moon.land("An asteroid");
-moon.land("Apollo 11");
+        moon.land("An asteroid");
+        moon.land("Apollo 11");
 // END classBasedExample
     }
 
     private static void lambdaBasedExample() {
 // BEGIN lambdaBasedExample
-Moon moon = new Moon();
+        Moon moon = new Moon();
 
-moon.startSpying(name -> {
-    if (name.contains("Apollo"))
-        System.out.println("We made it!");
-});
+        moon.startSpying(name -> {
+            if (name.contains("Apollo"))
+                System.out.println("We made it!");
+        });
 
-moon.startSpying(name -> {
-    if (name.contains("Apollo"))
-        System.out.println("They're distracted, lets invade earth!");
-});
+        moon.startSpying(name -> {
+            if (name.contains("Apollo"))
+                System.out.println("They're distracted, lets invade earth!");
+        });
 
-moon.land("An asteroid");
-moon.land("Apollo 11");
+        moon.land("An asteroid");
+        moon.land("Apollo 11");
 // END lambdaBasedExample
     }
 

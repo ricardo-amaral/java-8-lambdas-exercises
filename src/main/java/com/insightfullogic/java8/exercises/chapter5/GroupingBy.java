@@ -2,7 +2,9 @@ package com.insightfullogic.java8.exercises.chapter5;
 
 import com.insightfullogic.java8.exercises.Exercises;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;

@@ -11,6 +11,7 @@ import java.util.stream.Collector;
 public class AlbumSalesCollector implements Collector<AlbumSale, AlbumSalesReport, AlbumSalesReport> {
 
     private static final Set<Characteristics> characteristics = new HashSet<>();
+
     static {
         characteristics.add(Characteristics.UNORDERED);
         characteristics.add(Characteristics.IDENTITY_FINISH);

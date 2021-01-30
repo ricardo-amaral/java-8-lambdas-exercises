@@ -18,8 +18,8 @@ public class BlockingArtistAnalyzer {
 
     private long getNumberOfMembers(String artistName) {
         return artistLookupService.apply(artistName)
-                                  .getMembers()
-                                  .count();
+                .getMembers()
+                .count();
     }
 
 }

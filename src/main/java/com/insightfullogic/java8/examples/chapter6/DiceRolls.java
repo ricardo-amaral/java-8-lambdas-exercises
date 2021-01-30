@@ -21,35 +21,35 @@ public class DiceRolls {
 
     public static void main(String[] ignore) throws IOException, RunnerException {
         final String[] args = {
-            ".*DiceRolls.*",
-            "-wi",
-            "5",
-            "-i",
-            "5"
+                ".*DiceRolls.*",
+                "-wi",
+                "5",
+                "-i",
+                "5"
         };
         Main.main(args);
     }
 
     @GenerateMicroBenchmark
     // BEGIN serial
-public Map<Integer, Double> serialDiceRolls() {
-    double fraction = 1.0 / N;
-    return IntStream.range(0, N)
-                    .mapToObj(twoDiceThrows())
-                    .collect(groupingBy(side -> side, summingDouble(n -> fraction)));
-}
+    public Map<Integer, Double> serialDiceRolls() {
+        double fraction = 1.0 / N;
+        return IntStream.range(0, N)
+                .mapToObj(twoDiceThrows())
+                .collect(groupingBy(side -> side, summingDouble(n -> fraction)));
+    }
     // END serial
 
     @GenerateMicroBenchmark
     // BEGIN parallel
-public Map<Integer, Double> parallelDiceRolls() {
-    double fraction = 1.0 / N;
-    return IntStream.range(0, N)                        // <1>
-                    .parallel()                         // <2>
-                    .mapToObj(twoDiceThrows())          // <3>
-                    .collect(groupingBy(side -> side,   // <4>
+    public Map<Integer, Double> parallelDiceRolls() {
+        double fraction = 1.0 / N;
+        return IntStream.range(0, N)                        // <1>
+                .parallel()                         // <2>
+                .mapToObj(twoDiceThrows())          // <3>
+                .collect(groupingBy(side -> side,   // <4>
                         summingDouble(n -> fraction))); // <5>
-}
+    }
     // END parallel
 
     private static IntFunction<Integer> twoDiceThrows() {

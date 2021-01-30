@@ -15,15 +15,15 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Domain class for a popular music artist.
- * 
+ *
  * @author Richard Warburton
  */
 public final class Artist {
-    
+
     private String name;
     private List<Artist> members;
     private String nationality;
-    
+
     public Artist(String name, String nationality) {
         this(name, Collections.emptyList(), nationality);
     }

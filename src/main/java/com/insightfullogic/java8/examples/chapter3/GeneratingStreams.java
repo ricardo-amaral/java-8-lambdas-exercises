@@ -10,15 +10,15 @@ public class GeneratingStreams {
 
     static void generate() {
         Stream.generate(() -> "hello world")
-              .limit(3)
-              .forEach(System.out::println);
+                .limit(3)
+                .forEach(System.out::println);
     }
 
     static void iterate() {
         Stream.iterate(0, x -> x + 1)
 
-              .limit(5)
-              .forEach(System.out::println);
+                .limit(5)
+                .forEach(System.out::println);
     }
 
 }

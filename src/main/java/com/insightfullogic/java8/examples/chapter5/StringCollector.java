@@ -26,9 +26,9 @@ public class StringCollector implements Collector<String, StringCombiner, String
 
     @Override
     // BEGIN supplier
-public Supplier<StringCombiner> supplier() {
-    return () -> new StringCombiner(delim, prefix, suffix);
-}
+    public Supplier<StringCombiner> supplier() {
+        return () -> new StringCombiner(delim, prefix, suffix);
+    }
     // END supplier
 
     @Override

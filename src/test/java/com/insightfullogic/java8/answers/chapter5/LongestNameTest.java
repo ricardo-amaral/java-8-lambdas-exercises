@@ -2,7 +2,6 @@ package com.insightfullogic.java8.answers.chapter5;
 
 import com.insightfullogic.java8.examples.chapter1.Artist;
 import com.insightfullogic.java8.examples.chapter1.SampleData;
-import com.insightfullogic.java8.answers.chapter5.LongestName;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

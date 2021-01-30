@@ -2,7 +2,6 @@ package com.insightfullogic.java8.answers.chapter3;
 
 import com.insightfullogic.java8.examples.chapter1.Album;
 import com.insightfullogic.java8.examples.chapter1.SampleData;
-import com.insightfullogic.java8.answers.chapter3.Question1;
 import org.junit.Test;
 
 import java.util.List;
