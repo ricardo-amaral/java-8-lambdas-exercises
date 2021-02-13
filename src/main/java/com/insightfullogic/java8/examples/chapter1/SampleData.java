@@ -35,4 +35,8 @@ public class SampleData {
         return Arrays.asList(johnColtrane, johnLennon, theBeatles);
     }
 
+    public static List<Album> getAlbums() {
+        return Arrays.asList(aLoveSupreme, sampleShortAlbum, manyTrackAlbum);
+    }
+
 }
